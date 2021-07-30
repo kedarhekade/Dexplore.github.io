@@ -1,0 +1,206 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Stencil;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #222;
+	min-height: 100vh;
+}
+
+
+.about-section {
+	font-family: Calisto MT;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  background-color: ;
+  color: whitesmoke;
+  position: absolute;
+  top: 0;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+
+  width: 100%;
+  background-color: ;
+  color: white;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+.conatiner {
+	position: relative;
+	width: 1000px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 30px;
+} 
+
+.conatiner .card {
+	position: relative;
+	height: 250px;
+	background: #fff;
+	display: flex;
+	width: 45%;
+	margin: 30px 0;
+}
+
+.conatiner .card .imgBx{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #333;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	transition: 0.5s ease-in-out;
+
+}
+
+.conatiner .card:hover .imgBx{
+	width: 150px;
+	height: 150px;
+	left: -75px;
+	top: calc(50% - 75px);
+	transition: 0.8s ease-in-out;
+	background: #ff0057;
+}
+
+
+.conatiner .card .imgBx:before {
+	content: attr(data-text);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-size: 6em;
+	color: rgba(255, 255, 2550, 0.5);
+	font-weight: 700;
+}
+
+.conatiner .card .imgBx img {
+	max-width: 200px;
+	transition: 0.5s ease-in-out;
+}
+
+.conatiner .card:hover .imgBx img {
+	max-width: 75px;
+	
+}
+
+.conatiner .card .content {
+	position: absolute;
+	right: 0;
+	width: calc(100% - 75px);
+	height: 100%;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.conatiner .card .content h3 {
+	margin-bottom: 5px;
+	font-size: 24px;
+
+}
+
+.conatiner .card .content a {
+	display: inline-block;
+	margin-top: 10px;
+	margin-left: 3px;
+	padding: 5px 10px;
+	background: #333;
+	text-decoration: none;
+	color: #fff;
+}
+
+@media (max-width: 992px)
+{
+	.conatiner{
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.conatiner .card {
+		width: 400px;
+	}
+}
+
+@media (max-width: 768px)
+{
+	.conatiner .card {
+		max-width: 300px;
+
+	}
+	.conatiner .card .imgBx {
+		position: relative;
+	}
+	.conatiner .card .imgBx
+	.conatiner .card:hover .imgBx {
+		width: 100%;
+		height: 200px;
+		left: 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+.icon-bar {
+  width: 70px; /* Set a specific width */
+  background-color: #555; /* Dark-grey background */
+  position: fixed; top:0; left: 0; 
+}
+
+.icon-bar a {
+  display: block; /* Make the links appear below each other instead of side-by-side */
+  text-align: center; /* Center-align text */
+  padding: 16px; /* Add some padding */
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: white; /* White text color */
+  font-size: 36px; /* Increased font-size */
+}
+
+.icon-bar a:hover {
+  background-color: #000; /* Add a hover color */
+}
+
+.active {
+  background-color: #04AA6D; /* Add an active/current color */
+}
+
+
+
+
+
